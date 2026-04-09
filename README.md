@@ -26,7 +26,8 @@ This is my personal portfolio website showcasing my skills, projects, and certif
 - Contact Form
 
 ## 🔗 Live Demo
-*(Add your deployed link here if available)*
+<img width="1763" height="3187" alt="image" src="https://github.com/user-attachments/assets/e5a98a36-2250-4e0a-bd52-61149d681789" />
+
 
 ## 📧 Contact
 - Email: anjukirungel@gmail.com  
