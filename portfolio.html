@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anjali Kirunge | Portfolio</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+
+body { transition: 0.4s; background-color: black;}
+.dark-mode { background:#121212; color:white; }
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+}
+
+/* Bigger and cleaner container */
+.hero-box {
+    width: 95%;
+    max-width: 1400px;
+    min-height: 500px;
+    margin: auto;
+    padding: 60px;
+    border-radius: 25px;
+    background: rgba(231, 26, 33, 0.2);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 60px wheat;
+}
+
+/* Text styling */
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero h3 {
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    color: #ccc;
+}
+
+/* Buttons */
+.hero .btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(231, 26, 33, 0.2);
+}
+
+/* Profile image */
+.profile-box {
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    box-shadow: 0 0 60px rgba(231, 26, 33, 0.2);
+}
+
+.profile-img {
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ffc107;
+}
+
+/* subtle floating effect */
+.profile-box:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+/* NAV CARDS */
+.nav-cards {
+    padding: 40px 0;
+}
+
+.nav-card {
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.nav-card:hover {
+    transform: translateY(-8px);
+    background: #ecd380;
+    color: white;
+}
+
+.nav-card i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* PROJECT CARD */
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* RESUME CENTER FIX */
+.resume-btns {
+    text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar bg-dark text-white fw-bold sticky-top">
+<div class="container">
+    <span class="navbar-brand text-white">Anjali Kirunge</span>
+    <button onclick="toggleMode()" class="btn btn-light">🌙</button>
+</div>
+</nav>
+
+<!-- HERO -->
+<<section class="hero">
+  <div class="hero-box">
+    <div class="row align-items-center">
+
+      <!-- LEFT -->
+      <div class="col-md-6">
+        <h1>Hi, I'm <span class="text-warning">Anjali Kirunge</span></h1>
+        <h3><span id="typing"></span></h3>
+        <p>I build modern, responsive websites and scalable Java applications with clean UI & powerful backend.</p>
+
+        <div class="mt-4">
+          <a href="Anjal cv - Copy.pdf" download class="btn btn-warning me-3">Download Resume</a>
+          <a href="#contact me" class="btn btn-outline-warning">Contact Me</a>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col-md-6 text-center mt-4 mt-md-0">
+        <div class="profile-box">
+          <img src="photo.jpeg" class="profile-img">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NAV CARDS -->
+<section class="nav-cards mt-0">
+<div class="container-fluid bg-danger bg-opacity-25 p-5 rounded">
+<div class="row g-4 text-center">
+
+<div class="col-md-3">
+<a href="#profile" class="text-decoration-none">
+<div class="nav-card">
+<i class="fa fa-user text-warning"></i>
+<h5>Profile</h5>
+</div>
+</a>
+</div>
+
+<div class="col-md-3">
+<a href="#projects" class="text-decoration-none">
+<div class="nav-card">
+<i class="fa fa-code text-warning"></i>
+<h5>Projects</h5>
+</div>
+</a>
+</div>
+
+<div class="col-md-3">
+<a href="#certifications" class="text-decoration-none">
+<div class="nav-card">
+<i class="fa fa-file text-warning"></i>
+<h5>Certifications</h5>
+</div>
+</a>
+</div>
+
+<div class="col-md-3">
+<a href="#contact me" class="text-decoration-none">
+<div class="nav-card">
+<i class="fa fa-envelope text-warning"></i>
+<h5>Contact Me</h5>
+</div>
+</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROFILE -->
+<section id="profile" class="container-fluid py-5 bg-danger bg-opacity-25">
+    <div class="row g-4 text-center">
+<h2 class="text-center text-white mb-4">Profile</h2>
+
+<div class="row">
+<div class="col-md-6 text-white fs-5">
+<p><strong>Name:</strong> Anjali Kirunge</p>
+<p><strong>Email:</strong> anjukirungel@gmail.com</p>
+<p><strong>LinkedIn:</strong> <a href=" https://www.linkedin.com/in/anjalikirunge" target="_blank">LinkedIn Profile</a></p>
+<p><strong>Hackerrank:</strong> <a href="https://www.hackerrank.com/profile/anjukirunge" target="_blank">Hackerrank Profile</a></p>
+<p><strong>Github:</strong> <a href=" https://github.com/Anjali-kirunge" target="_blank">GitHub Profile</a></p>
+<p><strong>leetcode:</strong> <a href="https://leetcode.com/u/Anjali_kirunge/" target="_blank">Leetcode Profile</a></p>
+<p><strong>Phone:</strong> +91 7676400865</p>
+
+</div>
+
+<div class="col-md-6  text-white fs-5">
+<p>HTML</p>
+<div class="progress mb-2"><div class="progress-bar bg-warning" style="width:90%"></div></div>
+
+<p>CSS</p>
+<div class="progress mb-2"><div class="progress-bar bg-warning" style="width:85%"></div></div>
+
+<p>JavaScript with react.js</p>
+<div class="progress mb-2"><div class="progress-bar bg-warning" style="width:75%"></div></div>
+
+<p>Java with Advanced Java</p>
+<div class="progress mb-2"><div class="progress-bar bg-warning" style="width:89%"></div></div>
+
+<p>Mysql</p>
+<div class="progress mb-2"><div class="progress-bar bg-warning" style="width:80%"></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class=" container-fluid text-white bg-danger bg-opacity-25 py-5 mt-5">
+<div class="container">
+<h2 class="text-center mb-4">Projects</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card">
+<a href="miniproject" target="_blank"class="btn btn-warning">GQT website</a>
+<div class="card-body">
+<h5 class="text-center">GQT Website</h5>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card">
+<a href="website1\website1.html" target="_blank"class="btn btn-warning">Handmade Store</a>
+<div class="card-body">
+    <h5 class="text-center">Handmade Store website</h5>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card">
+<a href="digital market" target="_blank"class="btn btn-warning">Digital Asset Marketplace</a>
+<div class="card-body">
+<h5 class="text-center">Digital Asset marketplace web App</h5>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="container-fluid text-white bg-danger bg-opacity-25 py-5 mt-5">
+<h2 class="text-center mb-4">Certifications</h2>
+
+<div class="resume-btns">
+<a href="WhatsApp Image 2026-03-30 at 7.45.44 PM.jpeg" target="_blank" class="btn btn-warning m-2">View CyberSecurity Certification</a>
+<a href="WhatsApp Image 2026-03-30 at 7.45.45 PM.jpeg" target="_blank" class="btn btn-warning m-2">View java Certification</a>
+<a href="hack2.jpeg" target="_blank" class="btn btn-warning m-2">View Hackerrank Basics Certification</a>
+<a href="hackerrank.jpeg" target="_blank" class="btn btn-warning m-2">View Hackerrank Intermediate Certification</a>
+<a href="hack.jpeg" target="_blank" class="btn btn-warning m-2">View Hackerrank Advanced Certification </a>
+</div>
+
+</section>
+
+<!-- CONTACT ME -->
+<section id="contact me" class="container-fluid text-white bg-danger bg-opacity-25 py-5 mt-5">
+<h2 class="text-center mb-4">Contact Me</h2>
+
+<<form action="https://formspree.io/f/yourID" method="POST" class="w-50 mx-auto">
+  
+  <input class="form-control mb-3" name="name" placeholder="Your Name" required>
+
+  <input type="email" class="form-control mb-3" name="email" placeholder="Your Email" required>
+
+  <textarea class="form-control mb-3" name="message" rows="4" placeholder="Your Message" required></textarea>
+
+  <button type="submit" class="btn btn-warning w-100">Send Message</button>
+
+</form>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center bg-dark text-white  p-3">
+© 2026 Anjali Kirunge Java Full-stack Developer. All rights reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const text = ["Frontend Developer","Java Programmer","Web Designer"];
+let i=0,j=0,current="",isDeleting=false;
+
+function type(){
+current=text[i];
+if(!isDeleting){
+document.getElementById("typing").innerHTML=current.substring(0,j++);
+if(j>current.length){isDeleting=true;setTimeout(type,1000);return;}
+}else{
+document.getElementById("typing").innerHTML=current.substring(0,j--);
+if(j==0){isDeleting=false;i=(i+1)%text.length;}
+}
+setTimeout(type,isDeleting?50:100);
+}
+type();
+
+function toggleMode(){
+document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>
